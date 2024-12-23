@@ -1,0 +1,47 @@
+.header-container {
+  width: $max_width;
+  height: 8%;
+  background: $theme-color;
+  position: fixed;
+  .nav-link {
+    height: 100%;
+    align-items: center;
+    display: flex;
+  }
+}
+
+.nav-link li {
+  display: inline-block;
+  padding: 10px;
+}
+
+.nav-link li a {
+  text-decoration: none;
+  color: $white;
+  padding: 5px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  padding: 7px;
+  width: 100%;
+  background: cadetblue;
+  text-align: center;
+  color: $white;
+}
+
+.photo-container {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 215px;
+  height: 215px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+.img-style {
+  border-radius: 50%;
+  width: 215px;
+  height: 215px;
+}
