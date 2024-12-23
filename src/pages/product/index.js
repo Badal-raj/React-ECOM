@@ -27,7 +27,7 @@ export const Product = () => {
     setAllProducts(resultantData.payload.result);
     setFilteredProducts(resultantData.payload.result);
   } else {
-    toast.error(resultantData.payload);
+   // toast.error(resultantData.payload);
   }
   };
 
@@ -35,11 +35,11 @@ export const Product = () => {
     getProduct();
   }, []);
 
-  useEffect(() => {
-    if (error) {
-      toast.error(error);
-    }
-  }, [error]);
+  // useEffect(() => {
+  //   if (error) {
+  //     toast.error(error);
+  //   }
+  // }, [error]);
 
   const handleDeleteProduct = async (id) => {
     try {
