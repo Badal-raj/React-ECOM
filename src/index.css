@@ -1,0 +1,37 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.page-not-found-container {
+  height: 100vh;
+}
+
+.custom-error-container {
+  background: #E6E6E6 0% 0% no-repeat padding-box;
+  .error-container {
+    background: #99cccc;
+    font-family: 'hurme-geometric-sans-4-semibold';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px;
+    border-color: rgba(112, 112, 112, 1);
+    color: white;
+    border-radius: 0.5rem;
+    width: 24rem;
+    height: 16rem;
+  
+    .reset-button {
+      background: cadetblue;
+      color: white;
+      border: 0;
+      width: 7rem;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 4px;
+      padding: 6px 12px;
+    }
+  }
+}
