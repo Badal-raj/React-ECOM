@@ -27,7 +27,7 @@ export const NavHeader = () => {
             <Link to="add-product">Add Product</Link>
           </li>
           <li>
-            <Link to="update/:id">Update Product</Link>
+           Update Product
           </li>
           <li>
             <Link to="profile">Profile</Link>

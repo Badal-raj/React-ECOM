@@ -3,12 +3,14 @@ import React from "react";
 import { TextBox, PasswordBox, Button } from "../../components/common";
 
 export const LoginPage = ({
+  fields,
   errors,
   showPassword,
   handleLogin,
   handleNewRegistration,
   handleEyeClick,
-  handleChange
+  handleChange,
+  handleForgetPassword
 }) => {
   return (
     <div className="page-container d-flex">
@@ -25,6 +27,7 @@ export const LoginPage = ({
               className="form-control"
               placeholder="User Name"
               label="User id or Mobile no.*"
+              value={fields.userId}
               error={errors?.userId}
               onChange={handleChange}
             />
@@ -37,6 +40,7 @@ export const LoginPage = ({
               className="form-control"
               placeholder="Password"
               label="Password*"
+              value={fields.password}
               error={errors?.password}
               onChange={handleChange}
               showPassword={showPassword}
@@ -51,7 +55,7 @@ export const LoginPage = ({
         </div>
 
         <span className="d-flex mx-3 justify-content-end">
-          <span className="theme-link-style">Forgot Password ?</span>
+          <span className="theme-link-style" onClick={handleForgetPassword}>Forgot Password ?</span>
         </span>
 
         <span className="d-flex justify-content-end mx-3 my-2">

@@ -42,7 +42,7 @@ export const ProductPage = ({fields, productList, handleDeleteProduct, handleCha
               <Link className="ms-3" to={`/dashboard/update/${item._id}`}>Edit</Link>
             </li>
           </ul>
-        ) : <h6>No Result Found</h6>
+        ) : <div className="d-flex ms-4 ps-4 my-2"><span className="ms-4 ps-4">No result found for this user</span></div>
         }
       {/* */}
     </div>
