@@ -11,6 +11,7 @@ import { NotFoundPage } from "../pages/notFound/notFound"
 import { AddProduct } from "../pages/addProduct";
 import { UpdateProduct } from "../pages/updateProduct";
 import { UserProfileDetails } from "../pages/Profile";
+import { ForgetPassword } from "../pages/forgotPassword";
 
 export const PageRouter = () => {
   return (
@@ -19,7 +20,7 @@ export const PageRouter = () => {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/registration" element={<Registration />} />
-        {/* <Route path="/forgot-password" element={<ForgotPassword />} /> */}
+        <Route path="/forgot-password" element={<ForgetPassword />} />
         <Route element={<ProtectedRoute />}>
           <Route path="/dashboard" element={<Dashboard />} > 
           <Route path="" element={<Product />} />

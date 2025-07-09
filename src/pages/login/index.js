@@ -78,15 +78,21 @@ export const Login = () => {
     setShowPassword((prev) => !prev);
   };
 
+  const handleForgetPassword =()=>{
+     navigate("/forgot-password");
+  }
+
   return (
     <>
       <LoginPage
+        fields={fields}
         errors={errors}
         showPassword={showPassword}
         handleLogin={handleLogin}
         handleNewRegistration={handleNewRegistration}
         handleEyeClick={handleEyeClick}
         handleChange={handleChange}
+        handleForgetPassword={handleForgetPassword}
       />
     </>
   );
