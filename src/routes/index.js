@@ -12,6 +12,7 @@ import { AddProduct } from "../pages/addProduct";
 import { UpdateProduct } from "../pages/updateProduct";
 import { UserProfileDetails } from "../pages/Profile";
 import { ForgetPassword } from "../pages/forgotPassword";
+import { ResetPassword } from "../pages/resetPassword";
 
 export const PageRouter = () => {
   return (
@@ -21,6 +22,7 @@ export const PageRouter = () => {
         <Route path="/" element={<Login />} />
         <Route path="/registration" element={<Registration />} />
         <Route path="/forgot-password" element={<ForgetPassword />} />
+        <Route path="/reset-password/:id/:token" element={<ResetPassword />} />
         <Route element={<ProtectedRoute />}>
           <Route path="/dashboard" element={<Dashboard />} > 
           <Route path="" element={<Product />} />

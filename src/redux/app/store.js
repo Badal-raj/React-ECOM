@@ -12,6 +12,8 @@ import singleProductReducer from "../features/singleProductDetail/singleProductD
 import updateProductReducer from "../features/updateProduct/updateProductSlice";
 import uploadProfileReducer from "../features/uploadProfilePic/uploadProfileSlice";
 import userDetailSlice from "../features/uploadProfilePic/fetchUserDetaiSlice";
+import forgotPasswordSlice from  "../features/forgotPassword/forgotPasswordSlice";
+import resetPasswordSlice from "../features/resetPassword/resetPasswordSlice";
 
 const persistConfig = {
   key: 'auth',
@@ -32,6 +34,8 @@ const Store = configureStore({
     updatedData: updateProductReducer,
     profilePicData: uploadProfileReducer,
     userDetails: userDetailSlice,
+    forgotPassword: forgotPasswordSlice,
+    resetPasswordData: resetPasswordSlice 
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });
