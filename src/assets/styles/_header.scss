@@ -1,12 +1,59 @@
 .header-container {
   width: $max_width;
-  height: 8%;
+  height: 45px;
   background: $theme-color;
   position: fixed;
-  .nav-link {
-    height: 100%;
-    align-items: center;
+  .header-section-container {
     display: flex;
+    height: 100%;
+    .nav-link {
+      // align-items: center;
+      // display: flex;
+      width: 80%;
+    }
+    .profile-detail-container {
+      margin: 0 0 0 auto;
+      //height: 100%;
+      position: relative;
+      width: 20%;
+      .profile-wiget-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        width: 43px;
+        height: 43px;
+        border: 1px solid #dee2e6;
+        margin: 1px 4px 1px auto;
+        background-color: #dee2e6;
+        cursor: pointer;
+        .profile-pic {
+          border-radius: 50%;
+          width: 43px;
+          height: 43px;
+        }
+      }
+      .profile-file-container {
+        position: absolute;
+        width: 50%;
+        height: 80px;
+        border: 1px solid #e9ecef;
+        z-index: 999;
+        right: 0;
+        box-shadow: 0px 10px 18px 3px #e9ecef;
+        border-radius: 6px;
+        ul {
+          list-style: none; /* Removes bullet points */
+          padding:0 5px 5px 5px; /* Optional: remove default padding */
+          margin: 10px; /* Optional: remove default margin */
+        }
+
+        ul li a {
+          text-decoration: none; /* Removes underline from links */
+           color: $theme-color;
+        }
+      }
+    }
   }
 }
 

@@ -52,9 +52,6 @@ export const ResetPassword = () => {
   const handleResetPassword = async (e) => {
     e.preventDefault();
     if (formValidation()) {
-      const fieldsData = {
-        password: fields.password
-      };
       let fieildsData= {id: id,  token: token,  password: fields.password}
       try {
         const result = await dispatch(resetPasswordData(fieildsData));
