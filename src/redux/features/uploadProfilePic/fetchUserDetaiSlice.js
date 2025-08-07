@@ -1,10 +1,12 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
 export const hangleUserDetal = createAsyncThunk(
   "profile/user-details",
   async (user_id, { rejectWithValue }) => {
     try {
-      const response = await fetch("http://localhost:8001/api/profile", {
+      const response = await fetch(`${API_BASE_URL}/profile`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

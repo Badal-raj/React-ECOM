@@ -1,10 +1,12 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
 export const handleSingleProductDetail = createAsyncThunk(
   "product/single-product-detail",
   async ({productId, authToken}, { rejectWithValue }) => {
     try {
-      const response = await fetch(`http://localhost:8001/api/single-product/${productId}`,{
+      const response = await fetch(`${API_BASE_URL}/single-product/${productId}`,{
           method: "GET",
           headers: {
             Authorization: `Bearer ${authToken}`,

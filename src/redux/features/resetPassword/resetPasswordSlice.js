@@ -1,5 +1,7 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit"
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
 const initialState = {
     loading: false,
     resetData: null,
@@ -11,7 +13,7 @@ export const resetPasswordData = createAsyncThunk(
     'user/reset-password', 
     async ({id, token, password }, { rejectWithValue }) => {
       try {
-        const response = await fetch(`http://localhost:8001/api/reset-password/${id}/${token}`, {
+        const response = await fetch(`${API_BASE_URL}/reset-password/${id}/${token}`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

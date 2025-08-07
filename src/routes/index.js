@@ -4,9 +4,6 @@ import { Registration} from "../pages/registration";
 import { Login} from "../pages/login";
 import {Dashboard} from "../components/dashboard";
 import { Product } from "../pages/product";
-//import { AddProduct } from "../components/addProduct";
-//import { UpdateProduct } from "../components/updateProduct";
-import { Profile } from "../components/profile";
 import { NotFoundPage } from "../pages/notFound/notFound"
 import { AddProduct } from "../pages/addProduct";
 import { UpdateProduct } from "../pages/updateProduct";

@@ -1,11 +1,13 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
 // Thunk for updating user
 export const handleProductUpdate = createAsyncThunk(
   "user/updateProduct",
   async ({ id, productData, authToken }, { rejectWithValue }) => {
     try {
-      const response = await fetch(`http://localhost:8001/api/update/${id}`,{
+      const response = await fetch(`${API_BASE_URL}/update/${id}`,{
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",

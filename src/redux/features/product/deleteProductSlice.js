@@ -1,10 +1,11 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
 export const deleteProduct = createAsyncThunk(
   "product/deleteProduct",
   async ({productId, authToken}, { rejectWithValue }) => {
     try {
-      const response = await fetch(`http://localhost:8001/api/product/${productId}`,{
+      const response = await fetch(`${API_BASE_URL}/product/${productId}`,{
           method: "DELETE",
           headers: {
             'Authorization': `Bearer ${authToken}`,

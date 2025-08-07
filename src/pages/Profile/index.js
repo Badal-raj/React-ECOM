@@ -28,7 +28,7 @@ export const UserProfileDetails = () => {
     const imgSrc = e.target.files[0];
     if (imgSrc) {
       setImgUrl(imgSrc);
-      const objectURL = URL.createObjectURL(imgSrc); // Create a URL for the selected file
+     // const objectURL = URL.createObjectURL(imgSrc); // Create a URL for the selected file
       // setFile(objectURL);
     }
   };

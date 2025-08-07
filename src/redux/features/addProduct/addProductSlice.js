@@ -1,5 +1,7 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit"
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
 const initialState = {
     loading: false,
     addProductData: null,
@@ -10,7 +12,7 @@ export const handleaddProduct = createAsyncThunk(
     'addproduct', 
     async ({authToken, productData}, { rejectWithValue }) => {
       try {
-        const response = await fetch('http://localhost:8001/api/add-product', {
+        const response = await fetch(`${API_BASE_URL}/add-product`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
