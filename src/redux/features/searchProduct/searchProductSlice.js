@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
 export const searchProduct = createAsyncThunk(
   "product/searchProduct",
@@ -7,7 +8,7 @@ export const searchProduct = createAsyncThunk(
       const query = new URLSearchParams();
 
       if (searchCriteria) query.append("search", searchCriteria);
-      const response = await fetch(`http://localhost:8001/api/search-product?${query.toString()}`, {
+      const response = await fetch(`${API_BASE_URL}/search-product?${query.toString()}`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${authToken}`,

@@ -1,5 +1,7 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit"
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
 const initialState = {
     loading: false,
     profileUrl: null,
@@ -10,7 +12,7 @@ export const handleUploadProfilePic = createAsyncThunk(
     'user/uploadProfilePic', 
     async (profileData, { rejectWithValue }) => {
       try {
-        const response = await fetch('http://localhost:8001/api/upload', {
+        const response = await fetch(`${API_BASE_URL}/upload`, {
             method: 'POST',
             body: profileData,    
         });

@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
 const initialState = {
     loading: false,
@@ -10,7 +11,7 @@ export const registrationFormData = createAsyncThunk(
     'user/signup', 
     async (userData, { rejectWithValue }) => {
       try {
-        const response = await fetch('http://localhost:8001/api/create', {
+        const response = await fetch(`${API_BASE_URL}/create`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
