@@ -8,6 +8,8 @@ import { hangleUserDetal } from "../../redux/features/uploadProfilePic/fetchUser
 //import { persistor } from "../../redux/app/store";
 import { Profile_Avaatar } from "../../constants/svg";
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
 export const NavHeader = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -61,7 +63,7 @@ export const NavHeader = () => {
               <img
                 src={
                  userDetails?.profilePic
-                    ? `http://localhost:8001${userDetails?.profilePic}`
+                    ? `${API_BASE_URL}${userDetails?.profilePic}`
                     : Profile_Avaatar
                 }
                 alt="img"
@@ -72,7 +74,7 @@ export const NavHeader = () => {
               <img
                 src={
                  userData?.profilePic
-                    ? `http://localhost:8001${userData?.profilePic}`
+                    ? `${API_BASE_URL}${userData?.profilePic}`
                     : Profile_Avaatar
                 }
                 alt="img"
