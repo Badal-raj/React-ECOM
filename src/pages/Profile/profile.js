@@ -1,7 +1,7 @@
 import React from "react";
 import { dummyprofile_pic } from "../../constants/images";
 
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+const PROFILE_BASE_URL = process.env.REACT_APP_PROFILE_PIC;
 
 export const UploadProfile = ({ file, fileInputRef, handleChange, handleUploadFile }) => {
   
@@ -26,7 +26,7 @@ export const UploadProfile = ({ file, fileInputRef, handleChange, handleUploadFi
       </div>
       <div className="photo-container mx-4">
           <img
-            src={ file?.profilePic ? `${API_BASE_URL}${file?.profilePic}` : dummyprofile_pic}
+            src={ file?.profilePic ? `${PROFILE_BASE_URL}${file?.profilePic}` : dummyprofile_pic}
             alt="img"
             className="img-style"
           />
